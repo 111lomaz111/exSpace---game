@@ -29,6 +29,11 @@ public class set_mv_value : MonoBehaviour {
             show_actual_movement.text = "SLIDING";
             print("wczytano wczesniejesze ustawienie: movement_v2");
         }
+        else if (value == "movement_v3")
+        {
+            show_actual_movement.text = "ACCELEROMETER";
+            print("wczytano wczesniejesze ustawienie: movement_v3");
+        }
         else
         {
             show_actual_movement.text = "Select steering style";
@@ -47,6 +52,13 @@ public class set_mv_value : MonoBehaviour {
             PlayerPrefs.Save();
         }
         else if (value == "movement_v2" || value == "")
+        {
+            PlayerPrefs.SetString("movement", "movement_v3");
+            print("kliknieto i wybrano sterowanie movement_v3");
+            show_actual_movement.text = "Accelerometer";
+            PlayerPrefs.Save();
+        }
+        else if (value == "movement_v3" || value == "")
         {
             PlayerPrefs.SetString("movement", "movement_v1");
             print("kliknieto i wybrano sterowanie movement_v1");

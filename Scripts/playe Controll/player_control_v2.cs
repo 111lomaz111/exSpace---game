@@ -40,8 +40,7 @@ public class player_control_v2 : MonoBehaviour
                     possibility = false;
                 }
             }
-            else if ((Input.GetTouch(i).phase == TouchPhase.Ended ||
-                Input.GetTouch(i).phase == TouchPhase.Canceled) && possibility == false)
+            else if ((Input.GetTouch(i).phase == TouchPhase.Ended || Input.GetTouch(i).phase == TouchPhase.Canceled) && possibility == false)
             {
                 possibility = true;
             }
